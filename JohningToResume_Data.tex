@@ -1,0 +1,110 @@
+% ATS-Friendly Entry-Level Software Engineer Resume - One Page
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+% \usepackage{lmodern}
+\usepackage[left=0.5in, right=0.5in, top=0.3in, bottom=0.3in]{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{parskip}
+
+% ===== CUSTOMIZATION SECTION - EDIT YOUR INFO HERE =====
+\newcommand{\name}{Johning To}
+\newcommand{\phone}{(443) 621-0897}
+\newcommand{\email}{johningto618@gmail.com}
+\newcommand{\linkedin}{linkedin.com/in/johningto}
+\newcommand{\github}{github.com/johnt0}
+\newcommand{\location}{Baltimore, MD}
+
+\newcommand{\summary}{Entry Level Data Analyst pursuing an M.S. who bridges the gap between data analysis and software engineering, equally comfortable building an ML pipeline from raw data to evaluation as shipping the API that serves it. Driven by curiosity to understand how data behaves and the engineering discipline to turn that understanding into production-ready solutions.}
+
+\newcommand{\languages}{Python, C\#, JavaScript, TypeScript, Java, SQL, C++, Rust, HTML/CSS}
+\newcommand{\frameworks}{React, Node.js, Express.js, ASP.NET Core, Entity Framework Core, Recharts, scikit-learn, pandas, NumPy, Matplotlib}
+\newcommand{\databases}{PostgreSQL, MongoDB, SQLite, Redis}
+\newcommand{\toolstech}{Git, GitHub, RESTful APIs, Docker, Linux, CI/CD (GitHub Actions), Agile/Scrum, Visual Studio, .NET, OpenAPI/Swagger, Jupyter Notebooks}
+% ===== END CUSTOMIZATION SECTION =====
+
+\pdfgentounicode=1
+\pagestyle{empty}
+\hypersetup{colorlinks=true, linkcolor=black, urlcolor=black}
+
+\titleformat{\section}{\large\bfseries\uppercase}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{4pt}
+
+\setlist[itemize]{leftmargin=*, noitemsep, topsep=2pt, parsep=0pt, itemsep=5pt}
+
+\newcommand{\job}[4]{
+    \noindent\textbf{#1} \hfill \textbf{#2}\\
+    \textit{#3} \hfill \textit{#4}
+}
+
+\newcommand{\education}[4]{%
+    \noindent\textbf{#1} \hfill \textbf{#2}\\
+    \textit{#3}\ifx&#4&\else\hfill #4\fi\par
+}
+
+\newcommand{\project}[3]{
+    \noindent\textbf{#1} $\mid$ \textit{#2} \hfill \textbf{#3}
+}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+\begin{document}
+
+\begin{center}
+    {\Huge \textbf{\name}}\\
+    \location{} $\mid$ \phone{} $\mid$
+    \href{mailto:\email}{\email} $\mid$
+    \href{https://\linkedin}{\linkedin} $\mid$
+    \href{https://\github}{\github}
+\end{center}
+
+\section{Professional Summary}
+\summary
+
+\section{Education}
+\education{Clemson University}{Spring 2028}{M.S. Computer Science}{}
+\vspace{2pt}
+\education{University of Maryland, College Park}{May 2024}{Bachelor of Science in Computer Science}{}
+
+\section{Technical Skills}
+\textbf{Languages:} \languages\\
+\textbf{Frameworks \& Libraries:} \frameworks\\
+\textbf{Databases:} \databases\\
+\textbf{Tools \& Technologies:} \toolstech
+
+\section{Projects}
+
+\project{End-to-End Heart Disease Classification}{Python, scikit-learn, pandas, Matplotlib, Seaborn}{Apr 2026}
+\begin{itemize}
+    \item Built an end-to-end machine learning pipeline for binary classification on the Cleveland Heart Disease dataset (303 records, 13 features), performing exploratory data analysis and data preprocessing with pandas and NumPy
+    \item Trained and evaluated KNN, Logistic Regression, and Random Forest models; tuned hyperparameters with GridSearchCV and 5-fold cross-validation, achieving 87\% accuracy and 0.88 F1-score
+    \item Created data visualizations (correlation heatmaps, ROC curves, confusion matrices, feature-importance plots) using Matplotlib and Seaborn to drive feature selection and model evaluation
+\end{itemize}
+
+\project{Freight Rate Explorer}{TypeScript, React, Node.js, Express.js, MongoDB, Recharts}{Apr 2026}
+\begin{itemize}
+    \item Built a responsive single-page application using React and TypeScript to visualize regional freight and shipping rate data with interactive maps, charts, and drill-down filtering
+    \item Developed a Node.js/Express.js REST API to aggregate and serve rate data from MongoDB, implementing async request handling, query parameterization, and input validation
+    \item Designed a component-based dashboard with state management, dynamic search, and sorting to enable rapid comparison of shipping lanes, carriers, and cost trends
+\end{itemize}
+
+\project{WorkoutLogger REST API}{C\#, ASP.NET Core, Entity Framework Core, PostgreSQL}{Mar 2026}
+\begin{itemize}
+    \item Developed a RESTful Web API with full CRUD operations for Workouts, Exercises, and Sets using C\#, ASP.NET Core (.NET 10), and Entity Framework Core with an ORM-first approach
+    \item Designed relational data models with one-to-many entity relationships and optimized database queries using LINQ and eager loading for efficient data retrieval
+    \item Connected to PostgreSQL for persistent storage, enforced server-side data validation, and auto-generated OpenAPI/Swagger documentation for API testing and discoverability
+\end{itemize}
+
+\section{Experience}
+
+\job{Operations Manager}{Aug 2016 -- Present}{China Chef Restaurant}{Nottingham, MD}
+\begin{itemize}
+    \item Managed daily operations for family-owned restaurant, vendor relationships, and inventory across a team of 3
+    \item Administered and troubleshot point-of-sale (POS) system, network infrastructure, and online ordering platform integrations, ensuring high availability during peak hours
+\end{itemize}
+
+\end{document}
