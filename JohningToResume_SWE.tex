@@ -79,25 +79,32 @@ Developed data-driven projects including interactive dashboards and machine lear
 
 \section{Projects}
 
-\project{Freight Rate Explorer}{TypeScript, React, Node.js, Express.js, MongoDB, Recharts}{Apr 2026}
+\project{CartSync}{TypeScript, React, Node.js, Express.js, MongoDB, Socket.io}{May 2026}
 \begin{itemize}
-    \item Built a responsive single-page application using React and TypeScript to visualize regional freight and shipping rate data with interactive maps, charts, and drill-down filtering
-    \item Developed a Node.js/Express.js REST API to aggregate and serve rate data from MongoDB, implementing async request handling, query parameterization, and input validation
-    \item Designed a component-based dashboard with state management, dynamic search, and sorting to enable rapid comparison of shipping lanes, carriers, and cost trends
+    \item Built real time list synchronization using Socket.io, broadcasting 
+    item updates to all household members in under 50ms
+    \item Implemented JWT authentication scoping all grocery and household 
+    data per user, preventing cross-household data access at the service layer
+    \item Built a responsive React dashboard with optimistic UI updates, 
+    reflecting item changes instantly before server confirmation
 \end{itemize}
 
-\project{WorkoutLogger REST API}{C\#, ASP.NET Core, Entity Framework Core, PostgreSQL}{Mar 2026}
+\project{\href{https://github.com/johnt0/WorkoutLogger}{WorkoutLogger}}{C\#, ASP.NET Core, Entity Framework Core, PostgreSQL}{Mar 2026}
 \begin{itemize}
-    \item Developed a RESTful Web API with full CRUD operations for Workouts, Exercises, and Sets using C\#, ASP.NET Core (.NET 10), and Entity Framework Core with an ORM-first approach
-    \item Designed relational data models with one-to-many entity relationships and optimized database queries using LINQ and eager loading for efficient data retrieval
-    \item Connected to PostgreSQL for persistent storage, enforced server-side data validation, and auto-generated OpenAPI/Swagger documentation for API testing and discoverability
+    \item Eliminated N+1 query patterns across a 4-level entity hierarchy using EF Core eager loading,
+    reducing endpoint data retrieval to a single database round-trip
+    \item Achieved 85\%+ integration test coverage across 20+ API endpoints using
+    xUnit against a live PostgreSQL test database, validating authentication, CRUD,
+    and authorization flows
+    \item Load tested the deployed API with k6 under 100 simulated concurrent users,
+    sustaining 292 req/sec at 26ms average latency with 0\% error rate
 \end{itemize}
 
 \project{End-to-End Heart Disease Classification}{Python, scikit-learn, pandas, Matplotlib, Seaborn}{Feb 2026}
 \begin{itemize}
-    \item Built an end-to-end machine learning pipeline for binary classification on the Cleveland Heart Disease dataset (303 records, 13 features), performing exploratory data analysis and data preprocessing with pandas and NumPy
-    \item Trained and evaluated KNN, Logistic Regression, and Random Forest models; tuned hyperparameters with GridSearchCV and 5-fold cross-validation, achieving 87\% accuracy and 0.88 F1-score
-    \item Created data visualizations (correlation heatmaps, ROC curves, confusion matrices, feature-importance plots) using Matplotlib and Seaborn to drive feature selection and model evaluation
+    \item Built a binary classification pipeline on the Cleveland Heart Disease dataset using pandas and scikit-learn, including preprocessing, feature analysis, and model evaluation
+    \item Trained and benchmarked KNN, Logistic Regression, and Random Forest classifiers using GridSearchCV and 5-fold cross-validation, achieving 87\% accuracy and 0.88 F1-score
+    \item Generated ROC curves, confusion matrices, and feature-importance visualizations with Matplotlib and Seaborn to evaluate model performance and feature relevance
 \end{itemize}
 
 \section{Experience}
