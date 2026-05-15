@@ -63,9 +63,6 @@ Developed data-driven projects including interactive dashboards and machine lear
     \href{https://\github}{\github}
 \end{center}
 
-\section{Professional Summary}
-\summary
-
 \section{Education}
 \education{Clemson University}{Expected 2028}{M.S. Computer Science}{}
 \vspace{1pt}
@@ -79,16 +76,6 @@ Developed data-driven projects including interactive dashboards and machine lear
 
 \section{Projects}
 
-\project{CartSync}{TypeScript, React, Node.js, Express.js, MongoDB, Socket.io}{May 2026}
-\begin{itemize}
-    \item Built real time list synchronization using Socket.io, broadcasting 
-    item updates to all household members in under 50ms
-    \item Implemented JWT authentication scoping all grocery and household 
-    data per user, preventing cross-household data access at the service layer
-    \item Built a responsive React dashboard with optimistic UI updates, 
-    reflecting item changes instantly before server confirmation
-\end{itemize}
-
 \project{\href{https://github.com/johnt0/WorkoutLogger}{WorkoutLogger}}{C\#, ASP.NET Core, Entity Framework Core, PostgreSQL}{Mar 2026}
 \begin{itemize}
     \item Eliminated N+1 query patterns across a 4-level entity hierarchy using EF Core eager loading,
@@ -98,6 +85,20 @@ Developed data-driven projects including interactive dashboards and machine lear
     and authorization flows
     \item Load tested the deployed API with k6 under 100 simulated concurrent users,
     sustaining 292 req/sec at 26ms average latency with 0\% error rate
+    \item Containerized the API with a multi-stage Dockerfile for production deployment on Railway,
+    orchestrating local PostgreSQL and pgAdmin services with Docker Compose
+\end{itemize}
+
+\project{CartSync}{TypeScript, React, Node.js, Express.js, MongoDB, Socket.io}{May 2026}
+\begin{itemize}
+    \item Built real time list synchronization using Socket.io, broadcasting
+    item updates to all household members in under 50ms
+    \item Implemented JWT authentication scoping all grocery and household
+    data per user, preventing cross-household data access at the service layer
+    \item Built a responsive React dashboard with optimistic UI updates,
+    reflecting item changes instantly before server confirmation
+    \item Designed MongoDB document schemas and RESTful API routes to support
+    multi-household data isolation and scalable item management
 \end{itemize}
 
 \project{End-to-End Heart Disease Classification}{Python, scikit-learn, pandas, Matplotlib, Seaborn}{Feb 2026}
